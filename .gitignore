@@ -1,0 +1,32 @@
+# Wordpress
+
+# Core
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-content/languages
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Default Themes
+/wp-content/themes/twenty*/
+
+# Plugins
+/wp-content/plugins/hello.php
+
+# Uploads
+/wp-content/uploads/
+
+# Files
+*.log
+
+# htaccess
+/.htaccess
