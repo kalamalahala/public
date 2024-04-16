@@ -15,6 +15,7 @@
 
 # Configuration
 wp-config.php
+local-xdebuginfo.php
 
 # Default Themes
 /wp-content/themes/twenty*/
