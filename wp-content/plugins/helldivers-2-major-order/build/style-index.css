@@ -1,0 +1,37 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-helldivers-2-major-order {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+.wp-block-create-block-helldivers-2-major-order p {
+  font-size: 1.5em;
+  font-family: "h2-body";
+  color: #272727;
+}
+
+.wp-block-create-block-helldivers-2-major-order h2 {
+  font-size: 2em;
+  font-family: "h2-header";
+  color: #272727;
+}
+
+@font-face {
+  font-family: "h2-body";
+  src: url("fonts/FS%20Sinclair%20Regular.126d9abd.otf") format("opentype");
+}
+@font-face {
+  font-family: "h2-header";
+  src: url("fonts/FS%20Sinclair%20Bold.b79b832f.otf") format("opentype");
+}
+
+/*# sourceMappingURL=style-index.css.map*/
