@@ -33,18 +33,24 @@ console.log("Hello World! (from create-block-helldivers-2-major-order block)");
 const url = "https://helldiverstrainingmanual.com/api/v1/war/major-orders";
 fetch(url).then(response => response.json()).then(data => {
   data.forEach(order => {
+    // convert 'expiresIn' to #D #H #M #S
+    const expiresIn = order.expiresIn;
+    const days = Math.floor(expiresIn / (24 * 60 * 60));
+    const hours = Math.floor(expiresIn % (24 * 60 * 60) / (60 * 60));
+    const minutes = Math.floor(expiresIn % (60 * 60) / 60);
+    const seconds = Math.floor(expiresIn % 60);
+    console.log(days, hours, minutes, seconds);
     const majorOrder = document.createElement("div");
     majorOrder.innerHTML = `
-                <div style="background-color: #f0f0f0; padding: 1rem; margin-bottom: 1rem;">
+                <div style="color: white;">
                 <h2>${order.setting.overrideTitle}</h2>
+                <p>${days} days ${hours} hours ${minutes} minutes ${seconds} seconds</p>
                 <p>${order.setting.overrideBrief}</p>
                 <p>${order.setting.taskDescription}</p>
                 <p>${order.setting.reward.amount} XP</p>
                 </div>
             `;
-
-    // append to block .wp-block-create-block-helldivers-2-major-order
-    const block = document.querySelector(".wp-block-create-block-helldivers-2-major-order");
+    const block = document.querySelector(".helldivers-2-major-order-block");
     block.appendChild(majorOrder);
   });
 });

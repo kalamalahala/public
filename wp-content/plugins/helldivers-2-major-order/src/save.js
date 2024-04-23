@@ -4,7 +4,17 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
+
+/**
+ * i18n Import
+ */
+import { __ } from "@wordpress/i18n";
+
+/**
+ * Asset Imports
+ */
+import head from "./img/head.png";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -17,8 +27,23 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Helldivers 2 Major Order – hello from the saved content!' }
-		</p>
+		<div className="helldivers-2-major-order-block">
+			<header className="mo-header">
+				<div className="mo-header__container">
+					<p 
+						className="mo-header__time-text"
+					>
+						{
+							__('Major Order ends in:', 'helldivers-2-major-order')
+						}
+					</p>
+					<img
+						src={head}
+						alt="Helldivers 2 Major Order"
+						className="mo-header__logo"
+					/>
+				</div>
+			</header>
+		</div>
 	);
 }

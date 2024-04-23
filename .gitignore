@@ -22,6 +22,9 @@ local-xdebuginfo.php
 
 # Plugins
 /wp-content/plugins/hello.php
+/wp-content/plugins/block-work/node_modules/
+/wp-content/plugins/helldivers-2-major-order/node_modules/
+/wp-content/plugins/kala-testimonial-block/node_modules/
 
 # Uploads
 /wp-content/uploads/
