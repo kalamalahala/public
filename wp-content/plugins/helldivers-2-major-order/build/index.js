@@ -20,6 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 /* harmony import */ var _img_head_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/head.png */ "./src/img/head.png");
+/* harmony import */ var _img_sample_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/sample.png */ "./src/img/sample.png");
+/* harmony import */ var _img_medal_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/medal.png */ "./src/img/medal.png");
 
 /**
  * Retrieves the translation of text.
@@ -49,6 +51,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
+
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -58,26 +62,52 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function Edit() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "helldivers-2-major-order-block"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", {
-    className: "mo-header"
+    className: "mo-upper"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mo-header__container"
+    className: "mo-timer-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-timer-ends-in"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Major Order ends in:", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-timer-countdown"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_head_png__WEBPACK_IMPORTED_MODULE_4__
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-body"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('We have discovered Automoton plans for something called "The Reclamation". Capturing their deep-space comms array on Troost may reveal critical intel about their plans.', "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-overview"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
+    className: "mo-overview-icon"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "mo-overview-title"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("ORDER OVERVIEW", "helldivers-2-major-order"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirement-item"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-checkbox"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Capture the deep-space comms array on Troost", "helldivers-2-major-order"))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
+    className: "mo-footer"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-rewards-box"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "mo-header__time-text"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Major Order ends in:', 'helldivers-2-major-order')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: _img_head_png__WEBPACK_IMPORTED_MODULE_4__,
-    alt: "Helldivers 2 Major Order",
-    className: "mo-header__logo"
-  }))))
-  // <p { ...useBlockProps() }>
-  // 	{ __(
-  // 		'Helldivers 2 Major Order – hello from the editor!',
-  // 		'helldivers-2-major-order'
-  // 	) }
-  // </p>
-  ;
+    className: "mo-rewards-title"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("REWARD", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-rewards-text"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_medal_png__WEBPACK_IMPORTED_MODULE_6__
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    class: "reward"
+  }, "1"))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "sample-mo"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_sample_png__WEBPACK_IMPORTED_MODULE_5__,
+    alt: "sample"
+  })));
 }
 
 /***/ }),
@@ -153,6 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _img_head_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/head.png */ "./src/img/head.png");
+/* harmony import */ var _img_sample_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/sample.png */ "./src/img/sample.png");
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -172,6 +203,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 /**
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
@@ -182,19 +214,40 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function save() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "helldivers-2-major-order-block"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", {
-    className: "mo-header"
+    className: "mo-upper"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mo-header__container"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "mo-header__time-text"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Major Order ends in:', 'helldivers-2-major-order')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: _img_head_png__WEBPACK_IMPORTED_MODULE_3__,
-    alt: "Helldivers 2 Major Order",
-    className: "mo-header__logo"
-  }))));
+    className: "mo-timer-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-timer-ends-in"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Major Order ends in:", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-timer-countdown"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_head_png__WEBPACK_IMPORTED_MODULE_3__
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-body"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('We have discovered Automoton plans for something called "The Reclamation". Capturing their deep-space comms array on Troost may reveal critical intel about their plans.', "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-overview"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
+    className: "mo-overview-icon"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "mo-overview-title"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("ORDER OVERVIEW", "helldivers-2-major-order"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirement-item"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-checkbox"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Capture the deep-space comms array on Troost", "helldivers-2-major-order")))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "sample-mo"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_sample_png__WEBPACK_IMPORTED_MODULE_4__,
+    alt: "sample"
+  })));
 }
 
 /***/ }),
@@ -230,6 +283,26 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "images/head.5c69b881.png";
+
+/***/ }),
+
+/***/ "./src/img/medal.png":
+/*!***************************!*\
+  !*** ./src/img/medal.png ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/medal.f1f126d4.png";
+
+/***/ }),
+
+/***/ "./src/img/sample.png":
+/*!****************************!*\
+  !*** ./src/img/sample.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/sample.5aaec5b3.png";
 
 /***/ }),
 

@@ -13,28 +13,105 @@
 }
 @font-face {
   font-family: "h2-header";
-  src: url("fonts/FS%20Sinclair%20Bold.b79b832f.otf") format("opentype");
+  src: url("fonts/FS%20Sinclair%20Medium.b3b6bfb7.otf") format("opentype");
 }
 .helldivers-2-major-order-block {
   font-family: "h2-body";
   width: 424px;
   margin: 0 auto;
-  background-color: black;
+  background-color: #0c0c0c;
   padding: 20px;
 }
 
-.helldivers-2-major-order-block h2 {
-  font-family: "h2-header";
-  color: white;
-  font-size: 24px;
-  text-align: center;
+.mo-upper {
+  display: block;
+  margin-bottom: 10px;
 }
 
-.mo-header {
+.mo-timer-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  color: #f7e643;
   font-family: "h2-header";
-  color: white;
-  font-size: 24px;
-  text-align: center;
+  gap: 10px;
+}
+
+.mo-timer-countdown {
+  color: #0c0c0c;
+  background-color: #f7e643;
+  padding: 0px 15px;
+}
+
+.mo-body {
+  line-height: 1.1;
+  color: #d2d2ce;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.mo-requirements-group {
+  color: #ef7679;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mo-overview-title {
+  font-family: "h2-header";
+  margin: 0;
+}
+
+.mo-requirement-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.mo-requirements-checkbox {
+  width: 15px;
+  height: 15px;
+  background-color: darkgray;
+  border: 1px solid lightgray;
+  margin-right: 10px;
+}
+
+.mo-overview {
+  margin: 0;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.mo-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: repeating-linear-gradient(-45deg, #0c0c0c, #0c0c0c 5px, #333 5px, #333 7px);
+}
+
+.mo-rewards-box {
+  background: #1c1a19;
+  color: #d3d7d8;
+  padding: 20px;
+}
+
+.mo-rewards-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.mo-rewards-title {
+  font-family: "h2-header";
+  margin: 0;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

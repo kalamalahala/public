@@ -25,33 +25,29 @@ var __webpack_exports__ = {};
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log("Hello World! (from create-block-helldivers-2-major-order block)");
-/* eslint-enable no-console */
-
-// fetch https://helldiverstrainingmanual.com/api/v1/war/major-orders
 const url = "https://helldiverstrainingmanual.com/api/v1/war/major-orders";
 fetch(url).then(response => response.json()).then(data => {
   data.forEach(order => {
     // convert 'expiresIn' to #D #H #M #S
     const expiresIn = order.expiresIn;
-    const days = Math.floor(expiresIn / (24 * 60 * 60));
-    const hours = Math.floor(expiresIn % (24 * 60 * 60) / (60 * 60));
-    const minutes = Math.floor(expiresIn % (60 * 60) / 60);
-    const seconds = Math.floor(expiresIn % 60);
-    console.log(days, hours, minutes, seconds);
-    const majorOrder = document.createElement("div");
-    majorOrder.innerHTML = `
-                <div style="color: white;">
-                <h2>${order.setting.overrideTitle}</h2>
-                <p>${days} days ${hours} hours ${minutes} minutes ${seconds} seconds</p>
-                <p>${order.setting.overrideBrief}</p>
-                <p>${order.setting.taskDescription}</p>
-                <p>${order.setting.reward.amount} XP</p>
-                </div>
-            `;
-    const block = document.querySelector(".helldivers-2-major-order-block");
-    block.appendChild(majorOrder);
+    let days = Math.floor(expiresIn / (24 * 60 * 60));
+    let hours = Math.floor(expiresIn % (24 * 60 * 60) / (60 * 60));
+    let minutes = Math.floor(expiresIn % (60 * 60) / 60);
+    days = days > 0 ? days + "D " : "";
+    hours = hours > 0 ? hours + "H " : "";
+    minutes = minutes > 0 ? minutes + "M " : "";
+    const countdownElement = document.querySelector(".mo-timer-countdown");
+    if (countdownElement) {
+      countdownElement.innerHTML = days + hours + minutes;
+    }
+    const bodyElement = document.querySelector(".mo-body");
+    if (bodyElement) {
+      bodyElement.innerHTML = order.setting.overrideBrief;
+    }
+    const requirementsElement = document.querySelector(".mo-requirements");
+    if (requirementsElement) {
+      requirementsElement.innerHTML = order.setting.taskDescription;
+    }
   });
 });
 
