@@ -73,7 +73,8 @@ function Edit() {
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Major Order ends in:", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-timer-countdown"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: _img_head_png__WEBPACK_IMPORTED_MODULE_4__
+    src: _img_head_png__WEBPACK_IMPORTED_MODULE_4__,
+    className: "mo-header-img"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-body"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('We have discovered Automoton plans for something called "The Reclamation". Capturing their deep-space comms array on Troost may reveal critical intel about their plans.', "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -87,10 +88,10 @@ function Edit() {
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("ORDER OVERVIEW", "helldivers-2-major-order"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-requirement-item"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mo-requirements-checkbox"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-requirements"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Capture the deep-space comms array on Troost", "helldivers-2-major-order"))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-checkbox"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Capture the deep-space comms array on Troost!", "helldivers-2-major-order"))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
     className: "mo-footer"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-rewards-box"
@@ -184,6 +185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _img_head_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/head.png */ "./src/img/head.png");
 /* harmony import */ var _img_sample_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/sample.png */ "./src/img/sample.png");
+/* harmony import */ var _img_medal_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/medal.png */ "./src/img/medal.png");
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -201,6 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Asset Imports
  */
+
 
 
 
@@ -225,7 +228,8 @@ function save() {
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Major Order ends in:", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-timer-countdown"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00"), ":", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "00")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: _img_head_png__WEBPACK_IMPORTED_MODULE_3__
+    src: _img_head_png__WEBPACK_IMPORTED_MODULE_3__,
+    className: "mo-header-img"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-body"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('We have discovered Automoton plans for something called "The Reclamation". Capturing their deep-space comms array on Troost may reveal critical intel about their plans.', "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -239,10 +243,30 @@ function save() {
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("ORDER OVERVIEW", "helldivers-2-major-order"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-requirement-item"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mo-requirements-checkbox"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-requirements"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Capture the deep-space comms array on Troost", "helldivers-2-major-order")))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-requirements-checkbox"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Capture the deep-space comms array on Troost", "helldivers-2-major-order")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-planets-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-planet"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-planet-incomplete"
+  }, "X"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-planet-name"
+  }, "Troost")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
+    className: "mo-footer"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-rewards-box"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "mo-rewards-title"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("REWARD", "helldivers-2-major-order")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-rewards-text"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: _img_medal_png__WEBPACK_IMPORTED_MODULE_5__
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    class: "reward"
+  }, "1"))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "sample-mo"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: _img_sample_png__WEBPACK_IMPORTED_MODULE_4__,
@@ -282,7 +306,7 @@ __webpack_require__.r(__webpack_exports__);
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/head.5c69b881.png";
+module.exports = __webpack_require__.p + "images/head.a211ec85.png";
 
 /***/ }),
 
@@ -292,7 +316,7 @@ module.exports = __webpack_require__.p + "images/head.5c69b881.png";
   \***************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/medal.f1f126d4.png";
+module.exports = __webpack_require__.p + "images/medal.682a2d1a.png";
 
 /***/ }),
 

@@ -50,7 +50,7 @@ export default function Edit() {
 						</div>
 					</div>
 				</header>
-				<img src={head} />
+				<img src={head} className="mo-header-img" />
 				<div className="mo-body">
 					{__(
 						'We have discovered Automoton plans for something called "The Reclamation". Capturing their deep-space comms array on Troost may reveal critical intel about their plans.',
@@ -65,11 +65,11 @@ export default function Edit() {
 						</p>
 					</div>
 					<div className="mo-requirement-item">
-						<div className="mo-requirements-checkbox"></div>
 						<div className="mo-requirements">
+							<div className="mo-requirements-checkbox"></div>
 							<p>
 								{__(
-									"Capture the deep-space comms array on Troost",
+									"Capture the deep-space comms array on Troost!",
 									"helldivers-2-major-order",
 								)}
 							</p>
@@ -82,7 +82,8 @@ export default function Edit() {
 							{__("REWARD", "helldivers-2-major-order")}
 						</p>
 						<div className="mo-rewards-text">
-						<img src={medal} /><span class="reward">1</span>
+							<img src={medal} />
+							<span class="reward">1</span>
 						</div>
 					</div>
 				</footer>

@@ -4,12 +4,13 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-$dark-bg: #0c0c0c;
+$dark-bg: #010101;
 $helldiver-yellow: #f7e643;
 $helldiver-white: #d2d2ce;
 $helldiver-red: #ef7679;
 $seaf-text: #d3d7d8;
 $seaf-text-gray: #d2d2ce;
+$helldiver-lblue: #9fcce1;
 
 @font-face {
 	font-family: "h2-body";
@@ -23,10 +24,11 @@ $seaf-text-gray: #d2d2ce;
 
 .helldivers-2-major-order-block {
 	font-family: "h2-body";
-	width: 424px;
+	width: 500px;
 	margin: 0 auto;
 	background-color: $dark-bg;
 	padding: 20px;
+	box-sizing: border-box;
 }
 
 .mo-upper {
@@ -52,7 +54,7 @@ $seaf-text-gray: #d2d2ce;
 
 .mo-body {
 	line-height: 1.1;
-	color: $helldiver-white;
+	color: $helldiver-lblue;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -60,7 +62,7 @@ $seaf-text-gray: #d2d2ce;
 }
 
 .mo-requirements-group {
-	color: $helldiver-red;
+	// color: $helldiver-red;
 	margin: 0 20px;
 	display: flex;
 	flex-direction: column;
@@ -69,6 +71,19 @@ $seaf-text-gray: #d2d2ce;
 .mo-overview-title {
 	font-family: "h2-header";
 	margin: 0;
+}
+
+.mo-requirements {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	width: auto;
+}
+
+.mo-requirements p {
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
 .mo-requirement-item {
@@ -81,10 +96,14 @@ $seaf-text-gray: #d2d2ce;
 .mo-requirements-checkbox {
 	width: 15px;
 	height: 15px;
+	padding: 0;
 	background-color: darkgray;
 	border: 1px solid lightgray;
 	margin-right: 10px;
-	// border-radius: 5px;
+	box-sizing: border-box;
+	display: inline-block;
+	line-height: 15px;
+	flex: none;
 }
 
 .mo-overview {
@@ -97,18 +116,18 @@ $seaf-text-gray: #d2d2ce;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 50px;
+	width: 100%;
+	height: 135px;
 	background: repeating-linear-gradient(
-  -45deg,
-  $dark-bg,
-  $dark-bg 5px,
-  #333 5px,
-  #333 7px
-);
+		-45deg,
+		$dark-bg,
+		$dark-bg 5px,
+		#333 5px,
+		#333 7.5px
+	);
 }
 
 .mo-rewards-box {
-	background: #1c1a19;
 	color: $seaf-text;
 	padding: 20px;
 }
@@ -119,9 +138,84 @@ $seaf-text-gray: #d2d2ce;
 	align-items: center;
 	justify-content: center;
 	margin: 0;
+	background: repeating-linear-gradient(
+		60deg,
+		#090909,
+		#090909 1px,
+		#0a0a0a 1px,
+		#0a0a0a 2px
+	);
+	width: 165px;
+	height: 65px;
 }
 
 .mo-rewards-title {
 	font-family: "h2-header";
 	margin: 0;
+	display: flex;
+	justify-content: center;
 }
+
+.mo-header-img {
+	width: 100%;
+	height: auto;
+}
+
+.mo-planets-group {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 10px;
+}
+
+.mo-planet {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+// .mo-planet-incomplete {
+// 	// empty checkbox
+// 	background-color: $dark-bg;
+// 	border: 1px solid $helldiver-yellow;
+// 	border-radius: 5px;
+// 	padding: 10px;
+// }
+
+// .mo-planet-complete {
+// 	// checked checkbox
+// 	background-color: $helldiver-yellow;
+// 	border: 1px solid $dark-bg;
+// 	border-radius: 5px;
+// 	padding: 10px;
+// 	content: "✓";
+// }
+
+.mo-planet-name {
+	font-family: "h2-header";
+	margin: 0;
+}
+
+.mo-planet-progress {
+	width: 100%;
+	height: 20px;
+	background-color: $helldiver-red;
+	border-radius: 5px;
+	margin-top: 5px;
+	position: relative;
+	font-size: 15px;
+	color: $dark-bg;
+	font-family: "h2-header";
+}
+
+// .mo-planet-progress::after {
+// 	content: "";
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: $helldiver-lblue;
+// 	border-radius: 5px;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// }
