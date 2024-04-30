@@ -25,6 +25,7 @@ local-xdebuginfo.php
 /wp-content/plugins/block-work/node_modules/
 /wp-content/plugins/helldivers-2-major-order/node_modules/
 /wp-content/plugins/kala-testimonial-block/node_modules/
+/wp-content/plugins/query-monitor/
 
 # Uploads
 /wp-content/uploads/

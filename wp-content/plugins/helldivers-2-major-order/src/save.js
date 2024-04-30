@@ -70,7 +70,7 @@ export default function save() {
 						<div className="mo-planet">
 							<div className="mo-planet-incomplete">X</div>
 							<div className="mo-planet-name">Troost</div>
-							{/* <div className="mo-planet-progress">33%</div> */}
+							<div className="mo-planet-progress">33%</div>
 						</div>
 					</div>
 				</div>

@@ -28,3 +28,37 @@ function create_block_helldivers_2_major_order_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'create_block_helldivers_2_major_order_block_init' );
+
+// add ajax route /wp-json/helldivers-2-major-order/v1/major-order
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'helldivers-2-major-order/v1', '/major-order', array(
+		'methods' => 'GET',
+		'callback' => 'get_major_order',
+	) );
+} );
+
+// add ajax route to POST /wp-json/helldivers-2-major-order/v1/major-order
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'helldivers-2-major-order/v1', '/major-order', array(
+		'methods' => 'POST',
+		'callback' => 'set_major_order',
+	) );
+} );
+
+
+
+
+function get_major_order() {
+	$major_order = get_option( 'helldivers_2_major_order' );
+	$decoded_major_order = json_decode( $major_order );
+	return $decoded_major_order;
+}
+
+// accept json from body
+function set_major_order( $request ) {
+	$major_order = $request->get_json_params();	
+	$current_time = new DateTime();
+	$major_order['updated_at'] = $current_time->format( 'Y-m-d H:i:s' );
+	update_option( 'helldivers_2_major_order', json_encode( $major_order ) );
+	return $major_order;
+}

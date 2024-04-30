@@ -254,7 +254,9 @@ function save() {
     className: "mo-planet-incomplete"
   }, "X"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-planet-name"
-  }, "Troost")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
+  }, "Troost"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mo-planet-progress"
+  }, "33%")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("footer", {
     className: "mo-footer"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mo-rewards-box"
