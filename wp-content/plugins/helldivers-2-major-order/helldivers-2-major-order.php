@@ -31,7 +31,7 @@ add_action( 'init', 'create_block_helldivers_2_major_order_block_init' );
 
 // add ajax route /wp-json/helldivers-2-major-order/v1/major-order
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'helldivers-2-major-order/v1', '/major-order', array(
+	register_rest_route( 'helldivers-2-major-order/v1', 'war/major-orders', array(
 		'methods' => 'GET',
 		'callback' => 'get_major_order',
 	) );
@@ -39,7 +39,7 @@ add_action( 'rest_api_init', function () {
 
 // add ajax route to POST /wp-json/helldivers-2-major-order/v1/major-order
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'helldivers-2-major-order/v1', '/major-order', array(
+	register_rest_route( 'helldivers-2-major-order/v1', 'war/major-orders', array(
 		'methods' => 'POST',
 		'callback' => 'set_major_order',
 	) );

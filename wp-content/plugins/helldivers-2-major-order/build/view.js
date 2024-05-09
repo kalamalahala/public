@@ -1,89 +1,8 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/utilities/localget.js":
-/*!***********************************!*\
-  !*** ./src/utilities/localget.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   localGet: () => (/* binding */ localGet)
-/* harmony export */ });
-async function localGet(url = '/wp-json/helldivers-2-major-order/v1/', endpoint = 'major-order') {
-  return fetch(url + endpoint).then(response => response.json()).then(data => {
-    console.log(data);
-  });
-}
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
 /*!*********************!*\
   !*** ./src/view.js ***!
   \*********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_localget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/localget */ "./src/utilities/localget.js");
 /**
  * Use this file for JavaScript code that you want to run in the front-end
  * on posts/pages that contain this block.
@@ -105,15 +24,36 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
-
+// import { getFromApi } from "./utilities/getFromApi";
+// import { appColors } from "./utilities/appColors";
 
 function main() {
+  // const data = getFromApi('wp', 'major-orders').then((data) => {
+  // 	console.log('Fetched data from ', data.updated_at);
+
+  // 	// calculate time since last update 'updated_at' "2024-04-30 21:47:46"
+  // 	const lastUpdate = new Date(data.updated_at);
+  // 	const now = new Date();
+  // 	const timeSinceLastUpdate = now - lastUpdate;
+
+  // 	const forceUpdate = true;
+
+  // 	if (timeSinceLastUpdate / 1000 / 60 / 60 > 1 || forceUpdate) {
+  // 		console.log('Data is older than 1 hour or force update is enabled. Updating...');
+  // 		// fetch new data
+  // 		getFromApi('app', 'major-orders').then((data) => {
+  // 			console.log('Fetched new data from ', data.updated_at);
+  // 		})
+  // 	}
+
+  // })
+
   const url = "https://helldiverstrainingmanual.com/api/v1/war/major-orders";
   const campaignStatus = "https://helldiverstrainingmanual.com/api/v1/war/campaign";
   const automatonRed = "#ef7679";
   const terminidOrange = "#ffa300";
-  const data = (0,_utilities_localget__WEBPACK_IMPORTED_MODULE_0__.localGet)();
-  console.log(data);
+  // const data = localGet();
+  // console.log(data);
   fetch(url).then(response => response.json()).then(data => {
     data.forEach(order => {
       fetch(campaignStatus).then(response => response.json()).then(campaignData => {
@@ -133,6 +73,7 @@ function main() {
 
         // create planet elements
         campaignData.forEach(planet => {
+          console.log(planet);
           if (planet.majorOrder) {
             const factionColor = planet.faction === "Terminids" ? terminidOrange : automatonRed;
             const requirementGroup = document.querySelector(".mo-requirements-group");
@@ -195,8 +136,6 @@ function main() {
   });
 }
 document.addEventListener("DOMContentLoaded", main);
-})();
-
 /******/ })()
 ;
 //# sourceMappingURL=view.js.map
