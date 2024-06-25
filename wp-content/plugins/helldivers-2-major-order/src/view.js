@@ -19,18 +19,40 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
-
-import { localGet } from "./utilities/localget";
-
+// import { getFromApi } from "./utilities/getFromApi";
+// import { appColors } from "./utilities/appColors";
 
 function main() {
-  const url = "https://helldiverstrainingmanual.com/api/v1/war/major-orders";
-  const campaignStatus =
-    "https://helldiverstrainingmanual.com/api/v1/war/campaign";
-  const automatonRed = "#ef7679";
-  const terminidOrange = "#ffa300";
-	const data = localGet();
-	console.log(data);
+	// const data = getFromApi('wp', 'major-orders').then((data) => {
+	// 	console.log('Fetched data from ', data.updated_at);
+
+	// 	// calculate time since last update 'updated_at' "2024-04-30 21:47:46"
+	// 	const lastUpdate = new Date(data.updated_at);
+	// 	const now = new Date();
+	// 	const timeSinceLastUpdate = now - lastUpdate;
+
+	// 	const forceUpdate = true;
+		
+	// 	if (timeSinceLastUpdate / 1000 / 60 / 60 > 1 || forceUpdate) {
+	// 		console.log('Data is older than 1 hour or force update is enabled. Updating...');
+	// 		// fetch new data
+	// 		getFromApi('app', 'major-orders').then((data) => {
+	// 			console.log('Fetched new data from ', data.updated_at);
+	// 		})
+	// 	}
+
+	// })
+
+
+
+
+	const url = "https://helldiverstrainingmanual.com/api/v1/war/major-orders";
+	const campaignStatus =
+		"https://helldiverstrainingmanual.com/api/v1/war/campaign";
+	const automatonRed = "#ef7679";
+	const terminidOrange = "#ffa300";
+	// const data = localGet();
+	// console.log(data);
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
@@ -54,6 +76,7 @@ function main() {
 
 						// create planet elements
 						campaignData.forEach((planet) => {
+							console.log(planet);
 							if (planet.majorOrder) {
 								const factionColor =
 									planet.faction === "Terminids"
