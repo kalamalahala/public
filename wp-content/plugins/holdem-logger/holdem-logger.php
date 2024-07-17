@@ -13,18 +13,38 @@
  * @package CreateBlock
  */
 
+use HoldemLogger\Activator;
+use HoldemLogger\Deactivator;
+use HoldemLogger\HoldemLogger;
+require_once __DIR__ . '/class-holdemlogger.php';
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+define( 'HOLDEM_LOGGER_VERSION', '0.1.0' );
+
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
+ * Activation hook.
  *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ * @return void
  */
-function create_block_holdem_logger_block_init() {
-	register_block_type( __DIR__ . '/build' );
+function holdem_logger_activator() {
+	require_once __DIR__ . '/class-activator.php';
+	Activator::activate();
 }
-add_action( 'init', 'create_block_holdem_logger_block_init' );
+
+/**
+ * Deactivation hook.
+ *
+ * @return void
+ */
+function holdem_logger_deactivator() {
+	require_once __DIR__ . '/class-deactivator.php';
+	Deactivator::deactivate();
+}
+
+register_activation_hook( __FILE__, 'holdem_logger_activator' );
+register_deactivation_hook( __FILE__, 'holdem_logger_deactivator' );
+
+new HoldemLogger();

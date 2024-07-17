@@ -4,6 +4,10 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-holdem-logger {
-	border: 1px dotted #f00;
+.holdem-logger-app-contents {
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background: #f9f9f9;
+	max-width: fit-content;
 }
